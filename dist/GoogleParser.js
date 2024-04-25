@@ -98,7 +98,7 @@ export class GoogleParser {
             puppeteer.use(stealthPlugin());
             // @ts-ignore
             browser = await puppeteer.launch({
-                headless: false,
+                headless: true,
             });
             const page = await browser.newPage();
             const query = `shops near ${targetArea}`;
