@@ -140,7 +140,7 @@ export class GoogleParser implements Parser {
 
       // @ts-ignore
       browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
       });
 
       const page = await browser.newPage();
