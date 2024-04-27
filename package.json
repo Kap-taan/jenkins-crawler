@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc && node dist/index.js mumbai ./inputData true true false",
+    "dev": "tsc && node dist/index.js mumbai ./inputData true false false",
     "start": "node dist/index.js mumbai ./inputData false false false"
   },
   "keywords": [],

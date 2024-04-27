@@ -133,13 +133,24 @@ export class GoogleParser implements Parser {
     targetArea: string,
     selectedTargetAreas: string[],
   ): Promise<BusinessDataInterface[]> {
-    let browser: Browser;
+    let browser: any;
     try {
       // @ts-ignore
       puppeteer.use(stealthPlugin());
 
       // @ts-ignore
-      browser = await puppeteer.launch({
+      // browser = await puppeteer.launch({
+      //   headless: true,
+      //   executablePath: "/usr/bin/google-chrome",
+      // });
+      // @ts-ignore
+      // const browser = await puppeteer.connect({
+      //   browserWSEndpoint: "ws://localhost:3000",
+      // });
+
+      // @ts-ignore
+      browser = await puppeteer.connect({
+        browserWSEndpoint: "ws:172.19.0.2:3000",
         headless: true,
       });
 
